@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.coverdev.vstore.firebase.auth.FirebaseAuthHelper;
+import com.coverdev.vstore.util.DatabaseUtil;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button signIn, signUp;
+    private FirebaseAuthHelper firebaseAuthHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +23,19 @@ public class MainActivity extends AppCompatActivity {
         signIn = findViewById(R.id.signInBtn);
         signUp = findViewById(R.id.signUpBtn);
 
+        firebaseAuthHelper = new FirebaseAuthHelper();
+
         openIntent(signIn, LoginActivity.class);
         openIntent(signUp, RegisterActivity.class);
+        DatabaseUtil.initializeDatabase(this);
+    }
 
-//        FirebaseAuthHelper a = new FirebaseAuthHelper();
-//        a.signOut();
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (firebaseAuthHelper.isUserSignedIn()) {
+            toHome();
+        }
     }
 
     private void openIntent(Button button, Class<?> cls) {
@@ -36,5 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void toHome() {
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+        startActivity(intent);
     }
 }

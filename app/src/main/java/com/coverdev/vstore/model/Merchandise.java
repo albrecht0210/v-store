@@ -1,25 +1,30 @@
 package com.coverdev.vstore.model;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Merchandise {
     private String id;
     private String name;
     private String category;
     private Boolean availability;
-    private Number price;
+    private Integer price;
     private String description;
+    private List<String> keywords;// list of search words
     private String imageURL;
 
     public Merchandise() {
-        // Default constructor required for calls to DataSnapshot.getValue(Merchandise.class)
     }
 
-    public Merchandise(String id, String name, String category, Boolean availability, Number price, String description, String imageURL) {
+    public Merchandise(String id, String name, String category, Boolean availability, Integer price, String description, List<String> keywords, String imageURL) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.availability = availability;
         this.price = price;
         this.description = description;
+        this.keywords = keywords;
         this.imageURL = imageURL;
     }
 
@@ -39,7 +44,7 @@ public class Merchandise {
         return availability;
     }
 
-    public Number getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
@@ -67,7 +72,7 @@ public class Merchandise {
         this.availability = availability;
     }
 
-    public void setPrice(Number price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -77,5 +82,30 @@ public class Merchandise {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public Map<String, Object> toDocument() {
+        Map<String, Object> merchandise = new HashMap<>();
+        merchandise.put("name", this.name);
+        merchandise.put("category", this.category);
+        merchandise.put("availability", this.availability);
+        merchandise.put("price", this.price);
+        merchandise.put("description", this.description);
+        merchandise.put("keywords", this.keywords);
+        merchandise.put("imageUrl", this.imageURL);
+
+        return merchandise;
+    }
+
+    public static Merchandise toMerchandise(String id, Map<String, Object> merchandiseMap) {
+        String name = merchandiseMap.get("name").toString();
+        String category = merchandiseMap.get("category").toString();
+        Boolean availability = (Boolean) merchandiseMap.get("availability");
+        Integer price = Integer.parseInt(merchandiseMap.get("price").toString());
+        String description = merchandiseMap.get("description").toString();
+        List<String> keywords = (List<String>) merchandiseMap.get("keywords");
+        String imageUrl = merchandiseMap.get("imageUrl").toString();
+
+        return new Merchandise(id, name, category, availability, price, description, keywords, imageUrl);
     }
 }

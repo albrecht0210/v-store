@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Ayunda Risu Keychain",
+    "category": "Accessories",
+    "availability": true,
+    "price": 15,
+    "description": "A cute keychain featuring Ayunda Risu from Hololive ID.",
+    "keywords": ["Ayunda Risu", "Hololive ID", "keychain"],
+    "imageUrl": "https://example.com/ayunda_risu_keychain.jpg"
+  },
+  {
+    "name": "Moona Hoshinova T-Shirt",
+    "category": "Apparel",
+    "availability": true,
+    "price": 25,
+    "description": "A stylish t-shirt with a print of Moona Hoshinova from Hololive ID.",
+    "keywords": ["Moona Hoshinova", "Hololive ID", "t-shirt"],
+    "imageUrl": "https://example.com/moona_hoshinova_tshirt.jpg"
+  },
+  {
+    "name": "Airani Iofifteen Poster",
+    "category": "Posters",
+    "availability": false,
+    "price": 10,
+    "description": "A high-quality poster featuring Airani Iofifteen from Hololive ID.",
+    "keywords": ["Airani Iofifteen", "Hololive ID", "poster"],
+    "imageUrl": "https://example.com/airani_iofifteen_poster.jpg"
+  },
+  {
+    "name": "Kiryu Coco Figurine",
+    "category": "Collectibles",
+    "availability": true,
+    "price": 30,
+    "description": "A detailed figurine of Kiryu Coco from Hololive JP.",
+    "keywords": ["Kiryu Coco", "Hololive JP", "figurine"],
+    "imageUrl": "https://example.com/kiryu_coco_figurine.jpg"
+  },
+  {
+    "name": "Usada Pekora Hoodie",
+    "category": "Apparel",
+    "availability": true,
+    "price": 35,
+    "description": "A comfortable hoodie featuring Usada Pekora from Hololive JP.",
+    "keywords": ["Usada Pekora", "Hololive JP", "hoodie"],
+    "imageUrl": "https://example.com/usada_pekora_hoodie.jpg"
+  },
+  {
+    "name": "Houshou Marine Mug",
+    "category": "Home & Kitchen",
+    "availability": true,
+    "price": 15,
+    "description": "A ceramic mug with a print of Houshou Marine from Hololive JP.",
+    "keywords": ["Houshou Marine", "Hololive JP", "mug"],
+    "imageUrl": "https://example.com/houshou_marine_mug.jpg"
+  },
+  {
+    "name": "Gawr Gura Plushie",
+    "category": "Toys & Games",
+    "availability": true,
+    "price": 20,
+    "description": "A soft and cuddly plushie of Gawr Gura from Hololive EN.",
+    "keywords": ["Gawr Gura", "Hololive EN", "plushie"],
+    "imageUrl": "https://example.com/gawr_gura_plushie.jpg"
+  },
+  {
+    "name": "Amelia Watson Sticker Pack",
+    "category": "Stationery",
+    "availability": true,
+    "price": 5,
+    "description": "A pack of stickers featuring Amelia Watson from Hololive EN.",
+    "keywords": ["Amelia Watson", "Hololive EN", "stickers"],
+    "imageUrl": "https://example.com/amelia_watson_stickers.jpg"
+  },
+  {
+    "name": "Ninomae Ina'nis Notebook",
+    "category": "Stationery",
+    "availability": true,
+    "price": 10,
+    "description": "A notebook with a cover design of Ninomae Ina'nis from Hololive EN.",
+    "keywords": ["Ninomae Ina'nis", "Hololive EN", "notebook"],
+    "imageUrl": "https://example.com/ninomae_inanis_notebook.jpg"
+  }
+]

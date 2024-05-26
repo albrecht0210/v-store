@@ -1,5 +1,8 @@
 package com.coverdev.vstore.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Vtuber {
     private String id;
     private String name;
@@ -57,6 +60,25 @@ public class Vtuber {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public Map<String, Object> toDocument() {
+        Map<String, Object> vtuber = new HashMap<>();
+        vtuber.put("name", this.name);
+        vtuber.put("branch", this.branch);
+        vtuber.put("generation", this.generation);
+        vtuber.put("imageUrl", this.imageUrl);
+
+        return vtuber;
+    }
+
+    public static Vtuber toVtuber(String id, Map<String, Object> vtuberMap) {
+        String name = vtuberMap.get("name").toString();
+        String branch = vtuberMap.get("branch").toString();
+        String generation = vtuberMap.get("generation").toString();
+        String imageUrl = vtuberMap.get("imageUrl").toString();
+
+        return new Vtuber(id, name, branch, generation, imageUrl);
     }
 }
 

@@ -19,12 +19,10 @@ public class UserDatabaseHelper {
         final TaskCompletionSource<Boolean> taskCompletionSource = new TaskCompletionSource<>();
 
         Map<String, Object> userMap = newUser.toDocument();
-        System.out.println("Add User: " + newUser.getId());
-        System.out.println("Add User: " + userMap.get("first_name"));
+
         db.collection("users").document(newUser.getId())
                 .set(userMap)
                 .addOnCompleteListener(task -> {
-                    System.out.println("Is Add User: " + task.isSuccessful());
                     taskCompletionSource.setResult(task.isSuccessful());
                 });
         return taskCompletionSource.getTask();

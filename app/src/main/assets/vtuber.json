@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Ayunda Risu",
+    "branch": "Hololive ID",
+    "generation": "1st Generation",
+    "imageUrl": "https://example.com/ayunda_risu.jpg"
+  },
+  {
+    "name": "Moona Hoshinova",
+    "branch": "Hololive ID",
+    "generation": "1st Generation",
+    "imageUrl": "https://example.com/moona_hoshinova.jpg"
+  },
+  {
+    "name": "Airani Iofifteen",
+    "branch": "Hololive ID",
+    "generation": "1st Generation",
+    "imageUrl": "https://example.com/airani_iofifteen.jpg"
+  },
+  {
+    "name": "Kiryu Coco",
+    "branch": "Hololive JP",
+    "generation": "4th Generation",
+    "imageUrl": "https://example.com/kiryu_coco.jpg"
+  },
+  {
+    "name": "Usada Pekora",
+    "branch": "Hololive JP",
+    "generation": "3rd Generation",
+    "imageUrl": "https://example.com/usada_pekora.jpg"
+  },
+  {
+    "name": "Houshou Marine",
+    "branch": "Hololive JP",
+    "generation": "3rd Generation",
+    "imageUrl": "https://example.com/houshou_marine.jpg"
+  },
+  {
+    "name": "Gawr Gura",
+    "branch": "Hololive EN",
+    "generation": "1st Generation",
+    "imageUrl": "https://example.com/gawr_gura.jpg"
+  },
+  {
+    "name": "Amelia Watson",
+    "branch": "Hololive EN",
+    "generation": "1st Generation",
+    "imageUrl": "https://example.com/amelia_watson.jpg"
+  },
+  {
+    "name": "Ninomae Ina'nis",
+    "branch": "Hololive EN",
+    "generation": "1st Generation",
+    "imageUrl": "https://example.com/ninomae_inanis.jpg"
+  }
+]
